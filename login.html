@@ -1,0 +1,63 @@
+<html>
+<head>
+<title>We are Liverpool</title>
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+<link rel="stylesheet" type="text/css" href="liverpool.css">
+<script src="https://w3schools.com/lib/w3.js"></script>
+<!--link rel="stylesheet" type="text/css"  href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css"-->
+<script>
+function validateForm() {
+  var x = document.forms["loginform"]["emailid"].value;
+  var y= document.forms["loginform"]["password"].value;
+  if (x == "" && y=="") {
+    alert("Details must be filled out");
+    return false;
+  }
+  else if(x == "") {
+    alert("Email Id must be filled out");
+    return false;
+  }
+  else if(y==""){
+  	alert("Password must be filled out");
+    return false;
+  }
+}
+</script>
+</head>
+<body>
+<div class="container">
+<div class="ui red eight item inverted small icon menu">
+	<div class="icon item"><a href="liverpool.html"><img src="1.png"style="width:70px;height:80px;"></a></div>
+			<div class="item">News</div>
+			<div class="ui simple dropdown red item inverted menu">Matches
+				<div class="menu">
+					<a class="item" href="pl.html">Premier League</a>
+					<a class="item" href="#">Champions League</a>
+				</div></div>
+			<div class="ui simple dropdown red item inverted menu">Team
+			<div class="menu">
+					<a class="item" href="first_team.html">First Team</a></div></div>
+			<div class="ui simple dropdown red item inverted menu">Anfield
+						<div class="menu">
+							<div class="item">Visiting Anfield</div>
+							<div class="item">choice2</div>
+				</div>
+			</div>
+			<div class="active item">Fans</div>
+			<div class="item">Club</div>
+			<div class="item">Help</div>
+</div>
+</div>
+<div class="wrapper" align="center">
+	<form name="loginform" action="loginsession.php" method="post" onsubmit="return validateForm()">
+				<p align="left">Email Id</p>
+				<input type="email" name="emailid" placeholder="Enter Email Id"></td>
+				<p align="left">Password</p>
+				<input type="Password" name="password" placeholder="Enter Password">
+		<input type="submit" value="Login">
+		<a href="#">Forgot Password?</a>
+	</form>
+	<a href="signup.html">Not a Member?Sign Up</a>
+</div>
+</body>
+</html>
